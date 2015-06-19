@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+    <link href="app.css" rel="stylesheet"/>
+  <style>
+  </style>
+  </head>
+  <body>
+    <h1>Angular AutoPager</h1>
+
+    <pre><code>
+        &lt;button class="moreBtn" ng-click="vm.fetchData()" <span style="color:red;font-size:16px">auto-pager</span>&gt;READ MORE&lt;/button&gt;
+    </code></pre>
+
+    <div ng-controller="appController as vm">
+      <div class="data" ng-repeat="data in vm.datas">{{data.cnt}}<br/>{{data.text}}</div>
+      <div>
+        <button class="moreBtn" ng-click="vm.fetchData()" auto-pager>READ MORE</button>
+      </div>
+    </div>
+    <script type="text/javascript" src="angular.auto-pager.js"></script>
+    <script type="text/javascript">
+      angular.module('app', ['autoPager']);
+    </script>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>

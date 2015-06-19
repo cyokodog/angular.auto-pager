@@ -42,7 +42,7 @@
     }
     Controller.scroll = function(evt){
       if(o.getDocumentHeigh() - window.innerHeight - c.ms < o.getScrollTop()){
-        c.el.click();
+        c.el[0].click();
       }
     }
     win.on('scroll',Controller.scroll); 
